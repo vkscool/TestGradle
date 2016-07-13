@@ -1,0 +1,9 @@
+/build
+/.settings
+/.classpath
+
+/.project
+/bin
+/target
+/node_modules
+/npm-debug.log

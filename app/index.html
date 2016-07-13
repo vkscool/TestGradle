@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	  <!-- build:base -->
+	    <base href="/">
+	  <!-- endbuild -->
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title ng-bind="pageTitle"></title>
+      <meta name="description" content="">
+        
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	  
+	  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,500italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	  
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="app/css/main.css">
+      <link href="res/angularjs-toaster/1.1.0/toaster.min.css" rel="stylesheet" />
+      <script src="res/modernizr/2.8.3/modernizr.min.js"></script>
+      
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	  <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	  <![endif]-->
+	  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  </head>
+  <body ng-controller="ApplicationController">
+  	  <div class="page-container" ui-view >
+  	  	
+  	  </div>
+	  
+	  <mask></mask>
+	  <login-dir ng-if="!isLoginPage"></login-dir>
+	  <popup></popup>
+	  <toaster-container></toaster-container>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+      <script src="app/js/main.js"></script>
+  </body>
+</html>

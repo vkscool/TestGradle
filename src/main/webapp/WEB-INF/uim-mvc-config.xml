@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<beans:import resource="classpath:uim-data.xml" />
+	
+	<context:component-scan base-package="com.onmobile.uim" />
+ 	   
+    <beans:bean id="messageSource"
+        class="com.onmobile.uim.interceptor.MessageSource">
+        <beans:property name="basepath" value="file:${catalina.home}/conf/uim/resources/messages/" />
+        <beans:property name="basename" value="messages" />
+        <beans:property name="storeParamKey" value="storename"/>
+        <beans:property name="templateParamKey" value="template_id"/>
+        <beans:property name="defaultEncoding" value="UTF-8" />
+        <beans:property name="cacheSeconds" value="1200000"/>
+    </beans:bean>
+    
+    <beans:bean id="localeResolver"
+        class="com.onmobile.uim.interceptor.UIMLocaleResolver">
+        <beans:property name="defaultLocale" value="en" />
+        <beans:property name="paramName" value="language" />
+    </beans:bean>
+ 
+	<mvc:resources mapping="/res/**" location="/res/" />
+	 
+	<mvc:annotation-driven />
+	
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+ 
+</beans:beans>

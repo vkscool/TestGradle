@@ -1,0 +1,60 @@
+
+/*===== Basic reset =====*/
+
+html, body, div, span, legend {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+img {
+  border: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.error{
+	font-weight:bold;
+	color:red;
+}
+
+canvas#c {
+	display: block; 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.btn-round{
+	border-radius:4px !important;
+}
+
+/*===== General styles =====*/
+
+html {
+  height: 100%;
+}
+
+body {
+  /*font-family:'Roboto Regular',Arial, Helvetica, sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif !important;*/
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+  background: url(../images/backgrounds/default.jpg);
+  font-size: 12px;
+  line-height: 22px;
+  color: #5f5f5f;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,24 @@
+/* ========================================================
+*
+* Restaurant Main
+*
+* ========================================================
+*
+* File: main.css;
+* Description: General template styles, including bootstrap components
+* Version: 1.0
+*
+* ======================================================== */
+
+
+
+/*===== Import css files =====*/
+
+@import 'vars';
+@import 'typography';
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
+@import 'basic';
+@import 'blockui';
+@import 'theme';
+@import 'landing';
+

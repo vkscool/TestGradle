@@ -1,0 +1,48 @@
+<div class="registration-container">            
+            <div class="registration-box animated fadeInDown" style="padding-top:0px !important;">
+                <!-- <div class="registration-logo"></div> -->
+                <div class="registration-body" ng-controller="RegisterController">
+                    <div class="registration-title"><strong>Registration</strong>, use form below <a ui-sref="Landing" class="pull-right" style="color:#fff;text-decoration:none;"><i class="fa fa-arrow-left"></i> Back</a></div>
+                    <p class="error">{{errormessage}}</p>
+                    <form  class="form-horizontal" method="post" ng-submit="register();">
+                        
+                    <h4>Personal info</h4>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="First Name" ng-model="userinfo.firstName" required/>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="Last Name" ng-model="userinfo.lastName" />
+                        </div>
+                    </div>
+                    <h4>Authentication</h4>                    
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="email" class="form-control" placeholder="E-mail" ng-model="userinfo.email" required/>
+                        </div>
+                    </div>                        
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="Password" ng-model="userinfo.password" required/>
+                        </div>
+                    </div>                    
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="Re-Password" ng-model="userinfo.cpassword"/>
+                        </div>
+                    </div>             
+                    
+                    <div class="form-group push-up-30">
+                        <div class="col-md-6">
+                            <a ui-sref="LoginForm" class="btn btn-link btn-block">Already have account?</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-danger btn-block">Sign Up</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
